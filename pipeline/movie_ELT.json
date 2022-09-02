@@ -1,22 +1,13 @@
 {
-	"name": "movie",
+	"name": "movie_ELT",
 	"properties": {
 		"activities": [
-			{
-				"name": "Execute Pipeline1",
-				"type": "ExecutePipeline",
-				"dependsOn": [],
-				"userProperties": [],
-				"typeProperties": {
-					"waitOnCompletion": true
-				}
-			},
 			{
 				"name": "quarantined_bronze_to_silver",
 				"type": "ExecutePipeline",
 				"dependsOn": [
 					{
-						"activity": "Execute Pipeline1",
+						"activity": "bronze_to_silver",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -34,14 +25,7 @@
 			{
 				"name": "raw_to_bronze",
 				"type": "ExecutePipeline",
-				"dependsOn": [
-					{
-						"activity": "quarantined_bronze_to_silver",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
+				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
