@@ -69,7 +69,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "dataflow1",
+						"referenceName": "df_movie",
 						"type": "DataFlowReference"
 					},
 					"compute": {
