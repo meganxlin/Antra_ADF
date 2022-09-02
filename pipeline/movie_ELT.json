@@ -56,6 +56,23 @@
 				}
 			}
 		],
+		"parameters": {
+			"FileName": {
+				"type": "string",
+				"defaultValue": "*.json"
+			},
+			"FolderName": {
+				"type": "string"
+			},
+			"PipelineRunDateTime": {
+				"type": "string",
+				"defaultValue": "currentTimestamp()"
+			},
+			"ContainerName": {
+				"type": "string",
+				"defaultValue": "raw"
+			}
+		},
 		"annotations": []
 	}
 }
