@@ -35,7 +35,19 @@
 						}
 					},
 					"enableStaging": false
-				}
+				},
+				"inputs": [
+					{
+						"referenceName": "ds_dynamic_input_movie",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "ds_dynamic_output_movie",
+						"type": "DatasetReference"
+					}
+				]
 			}
 		],
 		"annotations": []
