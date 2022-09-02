@@ -25,6 +25,7 @@
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false,",
 				"     format: 'json',",
+				"     fileSystem: 'dataset',",
 				"     documentForm: 'documentPerLine') ~> source1"
 			]
 		}
