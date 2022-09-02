@@ -70,7 +70,11 @@
 				"typeProperties": {
 					"dataflow": {
 						"referenceName": "df_movie",
-						"type": "DataFlowReference"
+						"type": "DataFlowReference",
+						"parameters": {
+							"FileName": "*.json",
+							"PipelineRunDateTime": "currentTimestamp()"
+						}
 					},
 					"compute": {
 						"coreCount": 8,
