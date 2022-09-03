@@ -1,5 +1,5 @@
 {
-	"name": "Parquet1",
+	"name": "ds_parquet_output_movie",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage1",
@@ -7,10 +7,12 @@
 		},
 		"parameters": {
 			"FileName": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "@dataset().fileName"
 			},
 			"TableName": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "@dataset().tableName"
 			}
 		},
 		"annotations": [],
