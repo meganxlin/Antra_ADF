@@ -1,5 +1,5 @@
 {
-	"name": "raw_to_bronze",
+	"name": "pl_raw_to_bronze_movie",
 	"properties": {
 		"activities": [
 			{
@@ -39,7 +39,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_dynamic_input_movie",
+						"referenceName": "ds_raw_input_movie",
 						"type": "DatasetReference"
 					}
 				],
@@ -65,6 +65,7 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
+				"userProperties": [],
 				"typeProperties": {
 					"source": {
 						"type": "JsonSource",
@@ -78,7 +79,7 @@
 						}
 					},
 					"dataset": {
-						"referenceName": "ds_dynamic_input_movie",
+						"referenceName": "ds_raw_input_movie",
 						"type": "DatasetReference"
 					}
 				}
@@ -116,7 +117,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "ds_dynamic_input_movie",
+						"referenceName": "ds_raw_input_movie",
 						"type": "DatasetReference"
 					},
 					"fieldList": [
@@ -125,6 +126,7 @@
 					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
+						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {

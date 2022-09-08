@@ -1,5 +1,5 @@
 {
-	"name": "ds_dynamic_input_movie",
+	"name": "ds_raw_input_movie",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage1",

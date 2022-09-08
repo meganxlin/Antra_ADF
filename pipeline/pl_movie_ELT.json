@@ -1,5 +1,5 @@
 {
-	"name": "movie_ELT",
+	"name": "pl_movie_ELT",
 	"properties": {
 		"activities": [
 			{
@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
-						"referenceName": "quarantined_bronze_to_silver",
+						"referenceName": "pl_quarantined_bronze_to_silver_movie",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true
@@ -36,7 +36,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
-						"referenceName": "raw_to_bronze",
+						"referenceName": "pl_raw_to_bronze_movie",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true
@@ -56,7 +56,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
-						"referenceName": "bronze_to_silver",
+						"referenceName": "pl_bronze_to_silver_movie",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true
@@ -76,7 +76,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "df_movie",
+						"referenceName": "df_raw_to_bronze_movie",
 						"type": "DataFlowReference"
 					},
 					"compute": {
