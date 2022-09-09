@@ -45,7 +45,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "ds_parquet_output_movie",
+						"referenceName": "ds_parquet_bronze_movie",
 						"type": "DatasetReference",
 						"parameters": {
 							"FileName": "@dataset().fileName",
