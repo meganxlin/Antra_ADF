@@ -101,7 +101,13 @@
 						]
 					}
 				],
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity",
+						"type": "Expression"
+					}
+				}
 			},
 			{
 				"name": "Get Metadata1",
