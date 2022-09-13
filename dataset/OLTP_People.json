@@ -1,0 +1,16 @@
+{
+	"name": "OLTP_People",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "OLTP_Database",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "Application",
+			"table": "People"
+		}
+	}
+}
