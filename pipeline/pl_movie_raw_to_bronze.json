@@ -1,5 +1,5 @@
 {
-	"name": "pl_raw_to_bronze_movie",
+	"name": "pl_movie_raw_to_bronze",
 	"properties": {
 		"activities": [
 			{
