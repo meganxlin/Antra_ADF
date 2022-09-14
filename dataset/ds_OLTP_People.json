@@ -1,5 +1,5 @@
 {
-	"name": "OLTP_People",
+	"name": "ds_OLTP_People",
 	"properties": {
 		"description": "OLTP Application.People",
 		"linkedServiceName": {

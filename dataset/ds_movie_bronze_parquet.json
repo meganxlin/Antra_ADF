@@ -1,5 +1,5 @@
 {
-	"name": "ds_parquet_bronze_movie",
+	"name": "ds_movie_bronze_parquet",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage1",

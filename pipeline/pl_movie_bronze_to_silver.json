@@ -27,7 +27,7 @@
 						}
 					},
 					"dataset": {
-						"referenceName": "ds_raw_input_movie",
+						"referenceName": "ds_movie_raw",
 						"type": "DatasetReference"
 					}
 				}

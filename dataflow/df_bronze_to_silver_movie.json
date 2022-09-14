@@ -6,7 +6,7 @@
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "ds_parquet_bronze_movie",
+						"referenceName": "ds_movie_bronze_parquet",
 						"type": "DatasetReference"
 					},
 					"name": "source1"
@@ -15,7 +15,7 @@
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "ds_parquet_silver_movie",
+						"referenceName": "ds_movie_silver_parquet",
 						"type": "DatasetReference"
 					},
 					"name": "sink1"
