@@ -5,7 +5,14 @@
 			{
 				"name": "Copy Customers",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "ForEach1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -28,105 +35,6 @@
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
-						"mappings": [
-							{
-								"source": {
-									"name": "CustomerID",
-									"precision": 10
-								},
-								"sink": {
-									"name": "CustomerID"
-								}
-							},
-							{
-								"source": {
-									"name": "CustomerName"
-								},
-								"sink": {
-									"name": "CustomersName"
-								}
-							},
-							{
-								"source": {
-									"name": "BillToCustomerID",
-									"precision": 10
-								},
-								"sink": {
-									"name": "BillToCustomerID"
-								}
-							},
-							{
-								"source": {
-									"name": "CustomerCategoryID",
-									"precision": 10
-								}
-							},
-							{
-								"source": {
-									"name": "BuyingGroupID",
-									"precision": 10
-								}
-							},
-							{
-								"source": {
-									"name": "PrimaryContactPersonID",
-									"precision": 10
-								}
-							},
-							{
-								"source": {
-									"name": "AlternateContactPersonID",
-									"precision": 10
-								}
-							},
-							{
-								"source": {
-									"name": "DeliveryMethodID",
-									"precision": 10
-								}
-							},
-							{
-								"source": {
-									"name": "DeliveryCityID",
-									"precision": 10
-								}
-							},
-							{
-								"source": {
-									"name": "PostalCityID",
-									"precision": 10
-								}
-							},
-							{
-								"source": {
-									"name": "CreditLimit",
-									"scale": 2,
-									"precision": 18
-								}
-							},
-							{
-								"source": {
-									"name": "AccountOpenedDate"
-								}
-							},
-							{
-								"source": {
-									"name": "StandardDiscountPercentage",
-									"scale": 3,
-									"precision": 18
-								}
-							},
-							{
-								"source": {
-									"name": "IsStatementSent"
-								}
-							},
-							{
-								"source": {
-									"name": "IsOnCreditHold"
-								}
-							}
-						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
@@ -146,6 +54,62 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"activities": [
+						{
+							"name": "Copy Customers_copy1",
+							"type": "Copy",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"source": {
+									"type": "AzureSqlSource",
+									"queryTimeout": "02:00:00",
+									"partitionOption": "None"
+								},
+								"sink": {
+									"type": "AzureSqlSink",
+									"tableOption": "autoCreate",
+									"disableMetricsCollection": false
+								},
+								"enableStaging": false,
+								"translator": {
+									"type": "TabularTranslator",
+									"typeConversion": true,
+									"typeConversionSettings": {
+										"allowDataTruncation": true,
+										"treatBooleanAsNumber": false
+									}
+								}
+							},
+							"inputs": [
+								{
+									"referenceName": "OLTP_Customers",
+									"type": "DatasetReference"
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "ODS_Customers",
+									"type": "DatasetReference"
+								}
+							]
+						}
+					]
+				}
 			}
 		],
 		"parameters": {
