@@ -22,13 +22,7 @@
 					},
 					"sink": {
 						"type": "AzureSqlSink",
-						"writeBehavior": "upsert",
-						"upsertSettings": {
-							"useTempDB": true,
-							"keys": [
-								"CustomerID"
-							]
-						},
+						"writeBehavior": "insert",
 						"sqlWriterUseTableLock": false,
 						"tableOption": "autoCreate",
 						"disableMetricsCollection": false
@@ -36,14 +30,6 @@
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
-						"mappings": [
-							{
-								"source": {
-									"name": "CustomerID",
-									"precision": 10
-								}
-							}
-						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
