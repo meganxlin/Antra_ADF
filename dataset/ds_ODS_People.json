@@ -1,0 +1,12 @@
+{
+	"name": "ds_ODS_People",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ODS_Database",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}
