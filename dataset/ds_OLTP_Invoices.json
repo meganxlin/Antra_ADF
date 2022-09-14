@@ -1,5 +1,5 @@
 {
-	"name": "OLTP_Invoices",
+	"name": "ds_OLTP_Invoices",
 	"properties": {
 		"description": "OLTP Sales.Invoices",
 		"linkedServiceName": {

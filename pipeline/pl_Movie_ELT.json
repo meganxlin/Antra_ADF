@@ -1,5 +1,5 @@
 {
-	"name": "pl_movie_ELT",
+	"name": "pl_Movie_ELT",
 	"properties": {
 		"activities": [
 			{
@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
-						"referenceName": "pl_movie_raw_to_bronze",
+						"referenceName": "pl_Movie_raw_to_bronze",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true
@@ -36,7 +36,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
-						"referenceName": "pl_movie_bronze_to_silver",
+						"referenceName": "pl_Movie_bronze_to_silver",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true

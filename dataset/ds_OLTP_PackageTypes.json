@@ -1,5 +1,5 @@
 {
-	"name": "OLTP_PackageTypes",
+	"name": "ds_OLTP_PackageTypes",
 	"properties": {
 		"description": "OLTP Warehouse.PackageTypes",
 		"linkedServiceName": {

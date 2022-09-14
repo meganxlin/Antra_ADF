@@ -1,5 +1,5 @@
 {
-	"name": "pl_movie_bronze_to_silver",
+	"name": "pl_Movie_bronze_to_silver",
 	"properties": {
 		"activities": [
 			{
@@ -27,7 +27,7 @@
 						}
 					},
 					"dataset": {
-						"referenceName": "ds_movie_raw",
+						"referenceName": "ds_Movie_raw",
 						"type": "DatasetReference"
 					}
 				}

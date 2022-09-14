@@ -39,13 +39,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "OLTP_Customers",
+						"referenceName": "ds_OLTP_Customers",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "ODS_Customers",
+						"referenceName": "ds_ODS_Customers",
 						"type": "DatasetReference"
 					}
 				]

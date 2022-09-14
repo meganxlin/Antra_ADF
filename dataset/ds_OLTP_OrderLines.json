@@ -1,5 +1,5 @@
 {
-	"name": "OLTP_OrderLines",
+	"name": "ds_OLTP_OrderLines",
 	"properties": {
 		"description": "OLTP Sales.OrderLines",
 		"linkedServiceName": {

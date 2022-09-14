@@ -1,5 +1,5 @@
 {
-	"name": "ODS_Customers",
+	"name": "ds_ODS_Customers",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ODS_Database",
