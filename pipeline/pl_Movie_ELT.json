@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
-						"referenceName": "pl_Movie_raw_to_bronze",
+						"referenceName": "pl_Movie_Raw_to_Bronze",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true
@@ -36,7 +36,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
-						"referenceName": "pl_Movie_bronze_to_silver",
+						"referenceName": "pl_Movie_Bronze_to_Silver",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true

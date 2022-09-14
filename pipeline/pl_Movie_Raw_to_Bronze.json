@@ -1,5 +1,5 @@
 {
-	"name": "pl_Movie_raw_to_bronze",
+	"name": "pl_Movie_Raw_to_Bronze",
 	"properties": {
 		"activities": [
 			{
@@ -39,13 +39,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_Movie_raw",
+						"referenceName": "ds_Movie_Raw",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "ds_Movie_bronze_parquet",
+						"referenceName": "ds_Movie_Bronze_Parquet",
 						"type": "DatasetReference",
 						"parameters": {
 							"FileName": "@dataset().fileName",
@@ -79,7 +79,7 @@
 						}
 					},
 					"dataset": {
-						"referenceName": "ds_Movie_raw",
+						"referenceName": "ds_Movie_Raw",
 						"type": "DatasetReference"
 					}
 				}
@@ -123,7 +123,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "ds_Movie_raw",
+						"referenceName": "ds_Movie_Raw",
 						"type": "DatasetReference"
 					},
 					"fieldList": [
