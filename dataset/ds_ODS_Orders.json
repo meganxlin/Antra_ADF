@@ -1,0 +1,12 @@
+{
+	"name": "ds_ODS_Orders",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ODS_Database",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}
