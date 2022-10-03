@@ -74,19 +74,30 @@
 							"typeProperties": {
 								"source": {
 									"type": "SqlSource",
-									"sqlReaderQuery": {
-										"value": "@item().FilterQuery",
-										"type": "Expression"
-									},
 									"partitionOption": "None"
 								},
 								"sink": {
 									"type": "AzureSqlSink",
 									"writeBehavior": "insert",
-									"sqlWriterUseTableLock": false
+									"sqlWriterUseTableLock": false,
+									"tableOption": "autoCreate",
+									"disableMetricsCollection": false
 								},
 								"enableStaging": false,
-								"dataIntegrationUnits": 0
+								"dataIntegrationUnits": 0,
+								"translator": {
+									"type": "TabularTranslator",
+									"mappings": [
+										{
+											"source": {
+												"name": "CustomerID"
+											},
+											"sink": {
+												"name": "CustomerID"
+											}
+										}
+									]
+								}
 							},
 							"inputs": [
 								{
@@ -96,7 +107,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "AzureSqlTable1",
+									"referenceName": "Destination",
 									"type": "DatasetReference"
 								}
 							]
