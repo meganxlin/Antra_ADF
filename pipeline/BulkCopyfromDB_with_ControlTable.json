@@ -60,7 +60,7 @@
 					"activities": [
 						{
 							"name": "CopyOnePartition",
-							"description": "Copy activity to copy each partition from source database store to destination store.",
+							"description": "",
 							"type": "Copy",
 							"dependsOn": [],
 							"policy": {
@@ -73,41 +73,28 @@
 							"userProperties": [],
 							"typeProperties": {
 								"source": {
-									"type": "SqlSource",
+									"type": "AzureSqlSource",
+									"queryTimeout": "02:00:00",
 									"partitionOption": "None"
 								},
 								"sink": {
 									"type": "AzureSqlSink",
 									"writeBehavior": "insert",
 									"sqlWriterUseTableLock": false,
-									"tableOption": "autoCreate",
 									"disableMetricsCollection": false
 								},
 								"enableStaging": false,
-								"dataIntegrationUnits": 0,
-								"translator": {
-									"type": "TabularTranslator",
-									"mappings": [
-										{
-											"source": {
-												"name": "CustomerID"
-											},
-											"sink": {
-												"name": "CustomerID"
-											}
-										}
-									]
-								}
+								"dataIntegrationUnits": 0
 							},
 							"inputs": [
 								{
-									"referenceName": "AzureSqlDatabaseDataSource",
+									"referenceName": "ds_OLTP_Customers",
 									"type": "DatasetReference"
 								}
 							],
 							"outputs": [
 								{
-									"referenceName": "Destination",
+									"referenceName": "ds_ODS_Customers",
 									"type": "DatasetReference"
 								}
 							]
