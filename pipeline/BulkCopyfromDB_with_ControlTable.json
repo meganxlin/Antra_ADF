@@ -81,7 +81,9 @@
 									"partitionOption": "None"
 								},
 								"sink": {
-									"type": "DelimitedTextSink"
+									"type": "AzureSqlSink",
+									"writeBehavior": "insert",
+									"sqlWriterUseTableLock": false
 								},
 								"enableStaging": false,
 								"dataIntegrationUnits": 0
@@ -94,18 +96,8 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "DataDestination",
-									"type": "DatasetReference",
-									"parameters": {
-										"Data_Destination_Container": {
-											"value": "@pipeline().parameters.Data_Destination_Container",
-											"type": "Expression"
-										},
-										"Data_Destination_Directory": {
-											"value": "@pipeline().parameters.Data_Destination_Directory",
-											"type": "Expression"
-										}
-									}
+									"referenceName": "AzureSqlTable1",
+									"type": "DatasetReference"
 								}
 							]
 						}
