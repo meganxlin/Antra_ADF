@@ -27,13 +27,7 @@
 					},
 					"dataset": {
 						"referenceName": "AzureSqlDatabaseExternal_ControlTable",
-						"type": "DatasetReference",
-						"parameters": {
-							"TableName": {
-								"value": "@pipeline().parameters.Control_Table_Name",
-								"type": "Expression"
-							}
-						}
+						"type": "DatasetReference"
 					},
 					"firstRowOnly": false
 				}
@@ -95,7 +89,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "ds_ODS_Customers",
+									"referenceName": "Destination",
 									"type": "DatasetReference"
 								}
 							]
